@@ -91,15 +91,12 @@
 							<p>免费梯子 直连电报（Telegram）、大量优质糖果不再错过、币圈大佬都在用、币价动态、尽在掌握、没有一手信息、怎么赚钱？</p>
 
 							<div class="mu-app-download-area">
-								<a class="mu-apple-btn" href="itms-services://?action=download-manifest&url=https://airoam.github.io/airoam/app.plist">
-									<img src="assets/images/iphone.png" alt="">
-									<!-- <i class="fa fa-apple"></i> -->
-									<span>苹果下载</span>
+								<a class="mu-apple-btn" href="javascript:;">
+									<i class="fa fa-apple fa-2x"> 苹果下载</i>
+				
 								</a>
 								<a class="mu-google-btn" href="https://gitee.com/tomtao/telecoin/raw/master/TMessagesProj.apk">
-									<img src="assets/images/Android.png" alt="">
-									<!-- <i class="fa fa-android"></i> -->
-									<span>安卓下载</span>
+									<i class="fa fa-android fa-2x"> 安卓下载</i>
 								</a>
 							</div>
 						</div>
@@ -124,34 +121,34 @@
 	<script type="text/javascript" src="assets/js/app.js"></script>
 	<!-- Custom js -->
 	<script type="text/javascript" src="assets/js/custom.js"></script>
-
 	<script>
 		function isPC() {
-				var userAgentInfo = navigator.userAgent;
-				if(userAgentInfo.indexOf('Android') > 0){
-						$('#messageText').html('请点击右上<br>角选择“浏览器中打开”');
-						$('#messageBox').show();
-						return;
+				var ua = navigator.userAgent;
+				if(ua.indexOf('Android') > 0 && (ua.indexOf('QQ') > 0 || ua.indexOf('micromessenger') > 0)){
+					$('#messageText').html('请点击右上<br>角选择“浏览器中打开”');
+					$('#messageBox').show();
+					return;
 				}
-				if(userAgentInfo.indexOf('iPhone') > 0){
-						$('#messageText').html('请点击右上角<br>选择“safari”浏览器打开');
-						$('#messageBox').show();
-						return;
+				if((ua.indexOf('iPhone') > 0 || ua.indexOf('iPad') > 0 || ua.indexOf('iPod') > 0) 
+					&&(ua.indexOf('QQ') > 0 || ua.indexOf('micromessenger') > 0)){
+
+					$('#messageText').html('请点击右上角<br>选择“safari”浏览器打开');
+					$('#messageBox').show();
+					return;
 				}
-				if(userAgentInfo.indexOf('iPad') > 0){
-						$('#messageText').html('请点击右上角<br>选择“safari”浏览器打开');
-						$('#messageBox').show();
-						return;
-				}
-				if(userAgentInfo.indexOf('iPod') > 0){
-						$('#messageText').html('请点击右上角<br>选择“safari”浏览器打开');
-						$('#messageBox').show();
-						return;
-				}
+
 				$('#messageText').html('');
 				$('#messageBox').hide();
 		}
 		isPC();
+
+		$(function(){
+			$('.mu-apple-btn').click(function(){
+				if (confirm("下载成功后，点击“比特电报”会出现“未受信任的企业级开发者”提示框，点击“取消”后，依次点击“设置”→“通用”→“描述文件与设备管理”→“BEIJING HUADAHIBAO ELECTRONIC SYSTEM  Co.Ltd.”→ 信任“BEIJING HUADAHIBAO ELECTRONIC SYSTEM  Co.Ltd.”→“信任”")){
+					window.location.href = 'itms-services://?action=download-manifest&url=https://airoam.github.io/airoam/app.plist';
+				}
+			})
+		});
 	</script>
 </body>
 
