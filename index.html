@@ -24,41 +24,41 @@
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<style>
-			#messageBox {
-				display: none;
-				text-align: left;
-				background-color: rgba(255, 255, 255, 0.3);
-				padding: 20px;
-				position: absolute;
-				border-radius: 3px;
-				box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-				top: 10px;
-				right: 10px;
-				color: #bf0000;
-				font-size: 13px;
-				line-height: 1.4;
-				z-index: 999;
-			}
+	#messageBox {
+		display: none;
+		text-align: left;
+		background-color: rgba(255, 255, 255, 0.3);
+		padding: 20px;
+		position: absolute;
+		border-radius: 3px;
+		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+		top: 10px;
+		right: 10px;
+		color: #bf0000;
+		font-size: 13px;
+		line-height: 1.4;
+		z-index: 999;
+	}
 
-			#messageBox:before {
-				position: absolute;
-				content: '';
-				width: 0;
-				height: 0;
-				border: 6px solid transparent;
-				border-bottom-color: rgba(255, 255, 255, 0.3);
-				right: 10px;
-				top: -12px;
-			}
+	#messageBox:before {
+		position: absolute;
+		content: '';
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-bottom-color: rgba(255, 255, 255, 0.3);
+		right: 10px;
+		top: -12px;
+	}
 
-			#messageBox:after {
-				width: 100%;
-				height: 40px;
-				content: '';
-				position: absolute;
-				top: -40px;
-				left: 0;
-			}
+	#messageBox:after {
+		width: 100%;
+		height: 40px;
+		content: '';
+		position: absolute;
+		top: -40px;
+		left: 0;
+	}
 	</style>
 </head>
 
@@ -124,13 +124,13 @@
 	<script>
 		function isPC() {
 				var ua = navigator.userAgent;
-				if(ua.indexOf('Android') > 0 && (ua.indexOf('QQ') > 0 || ua.indexOf('micromessenger') > 0)){
+				if(ua.indexOf('Android') > 0 && (ua.indexOf('QQ') > 0 || ua.indexOf('MicroMessenger') > 0)){
 					$('#messageText').html('请点击右上<br>角选择“浏览器中打开”');
 					$('#messageBox').show();
 					return;
 				}
 				if((ua.indexOf('iPhone') > 0 || ua.indexOf('iPad') > 0 || ua.indexOf('iPod') > 0) 
-					&&(ua.indexOf('QQ') > 0 || ua.indexOf('micromessenger') > 0)){
+					&&(ua.indexOf('QQ') > 0 || ua.indexOf('MicroMessenger') > 0)){
 
 					$('#messageText').html('请点击右上角<br>选择“safari”浏览器打开');
 					$('#messageBox').show();
